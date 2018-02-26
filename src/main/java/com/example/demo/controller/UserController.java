@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.UserEntity;
 import com.example.demo.jpa.UserJPA;
+import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,10 +21,12 @@ public class UserController {
 
     @Autowired
     private UserJPA userJPA;
+    @Autowired
+    private UserService userService;
 
     @RequestMapping(value = "/findAll",method = RequestMethod.GET)
     public List<UserEntity> list(){
-        return userJPA.findAll();
+        return userService.list();
     }
     @RequestMapping(value = "save",method = RequestMethod.GET)
     public UserEntity save(UserEntity userEntity){

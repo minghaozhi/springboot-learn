@@ -12,7 +12,7 @@
 </head>
 <body>
 <form method="get" action="/login/login">
-    用户名：<input typr="text" name="name"/><br/>
+    用户名：<input typr="text" name="username"/><br/>
     密码：<input type="text" name="password"/>
     <input type="submit" value="登录"/>
 </form>

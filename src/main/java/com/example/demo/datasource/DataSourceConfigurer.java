@@ -16,7 +16,6 @@ import javax.sql.DataSource;
  * @Date : 2018/2/26.
  */
 @Configuration
-@Component
 public class DataSourceConfigurer {
     //用户数据源
     @Bean(name = "userDataSource")//装配该方法返回值为userDataSource管理bean

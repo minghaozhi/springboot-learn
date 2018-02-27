@@ -23,15 +23,9 @@ import javax.sql.DataSource;
 import java.util.Map;
 
 /**
- * 91信用卡数据源详细配置
- * 项目名称：credirCardApi
- * 项目版本：V1.0
- * 包名称：com.bankcard.api
- * 创建人：yuqy
- * 创建时间：2017/2/19 15:40
- * 修改人：yuqy
- * 修改时间：2017/2/19 15:40
- * 修改备注：
+ * @author 墨殇
+ * @description:
+ * @Date : 2018/2/26.
  */
 @Configuration
 @EnableTransactionManagement
@@ -58,7 +52,7 @@ public class UserDataSourceConfigurer
         return builder
                 .dataSource(userDataSource)
                 .properties(getVendorProperties(userDataSource))
-                .packages(new String[]{ "com.yuqiyu.chapter24.user" }) //设置应用creditDataSource的基础包名
+                .packages(new String[]{ "com.example.demo.user" }) //设置应用creditDataSource的基础包名
                 .persistenceUnit("userPersistenceUnit")
                 .build();
     }

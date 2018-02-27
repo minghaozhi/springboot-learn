@@ -1,14 +1,5 @@
 spring:
-  redis:
-   host: 119.29.163.75
-   port: 6379
-   pool:
-     max-active: 20
-     max-idle: 20
-     min-idle: 1
-     max-wait: 60000
-   database: 0
-  datasource:
+ datasource:
    book:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -28,7 +19,7 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     filters: stat, wall, log4j
-  user:
+   user:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/test1?characterEncoding=utf8
@@ -47,17 +38,25 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     filters: stat, wall, log4j
-  jpa:
+ jpa:
     properties:
       hibernate:
         show_sql: true
         format_sql: true
-  mvc:
+ mvc:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
-  http:
+ http:
     multipart:
       max-file-size: 1024MB
       max-request-size: 2048MB
-
+ redis:
+     host: 119.29.163.75
+     port: 6379
+     pool:
+       max-active: 20
+       max-idle: 20
+       min-idle: 1
+       max-wait: 60000
+     database: 0

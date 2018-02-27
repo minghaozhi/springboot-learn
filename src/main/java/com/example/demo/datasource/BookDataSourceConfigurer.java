@@ -49,7 +49,7 @@ public class BookDataSourceConfigurer
         return builder
                 .dataSource(bookDataSource)
                 .properties(getVendorProperties(bookDataSource))
-                .packages(new String[]{ "com.yuqiyu.chapter24.book" }) //设置应用creditDataSource的基础包名
+                .packages(new String[]{ "com.example.demo.book" }) //设置应用creditDataSource的基础包名
                 .persistenceUnit("bookPersistenceUnit")
                 .build();
     }
